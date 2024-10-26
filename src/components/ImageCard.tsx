@@ -6,9 +6,10 @@ interface ImageCardProps {
   alt: string;
   region: string;
   tags: string[];
+  type: string;
 }
 
-const ImageCard = ({ src, alt, region, tags }: ImageCardProps) => {
+const ImageCard = ({ src, alt, region, tags, type }: ImageCardProps) => {
   const [imageError, setImageError] = useState(false);
 
   const handleDownload = () => {
@@ -31,7 +32,8 @@ const ImageCard = ({ src, alt, region, tags }: ImageCardProps) => {
           src={src}
           alt={alt}
           className="w-full object-cover opacity-85 group-hover:opacity-100 transition-opacity"
-          //style={{ height: '400px' }}
+          
+          style={type === 'desktop' ? { height: '250px' } : {height: '550px'}}
           loading="lazy"
           onError={handleImageError}
         />

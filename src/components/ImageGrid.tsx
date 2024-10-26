@@ -78,6 +78,7 @@ const ImageGrid = ({ images, loading, deviceType }: ImageGridProps) => {
             alt={image.alt}
             region={image.region}
             tags={image.tags}
+            type={image.type}
           />
         ))}
       </div>
