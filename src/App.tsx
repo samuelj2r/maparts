@@ -10,6 +10,16 @@ const App = () => {
   const [selectedregion, setSelectedregion] = useState<string | null>(null);
   const { images, loading } = useImages(deviceType);
 
+  const handleTagClick = (tag: string) => {
+    setSearchQuery(tag);
+    setSelectedregion(null); // Limpiar filtro de región si se hace clic en un tag
+  };
+
+  const handleRegionClick = (region: string) => {
+    setSelectedregion(region);
+    setSearchQuery(''); // Limpiar la búsqueda si se selecciona una región
+  };
+
   const filteredImages = images.filter((image) => {
     const matchesSearch = !searchQuery.trim() || 
       image.alt.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -31,7 +41,13 @@ const App = () => {
       />
       <SearchBar searchQuery={searchQuery} onSearchChange={setSearchQuery} />
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <ImageGrid images={filteredImages} loading={loading} deviceType={deviceType} />
+        <ImageGrid 
+          images={filteredImages} 
+          loading={loading} 
+          deviceType={deviceType} 
+          onTagClick={handleTagClick}
+          onRegionClick={handleRegionClick}
+        />
       </main>
     </div>
   );

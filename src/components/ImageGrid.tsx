@@ -6,6 +6,8 @@ interface ImageGridProps {
   images: ImageType[];
   loading: boolean;
   deviceType: 'desktop' | 'mobile';
+  onTagClick: (tag: string) => void; 
+  onRegionClick: (region: string) => void;
 }
 
 const IMAGES_PER_PAGE = 9;
@@ -17,7 +19,7 @@ const shuffleArray = (array: ImageType[]) => {
     .map(({ value }) => value);
 };
 
-const ImageGrid = ({ images, loading, deviceType }: ImageGridProps) => {
+const ImageGrid = ({ images, loading, deviceType, onTagClick, onRegionClick }: ImageGridProps) => {
   const [displayedImages, setDisplayedImages] = useState<ImageType[]>([]);
   const [page, setPage] = useState(1);
   const loader = useRef(null);
@@ -88,6 +90,8 @@ const ImageGrid = ({ images, loading, deviceType }: ImageGridProps) => {
             region={image.region}
             tags={image.tags}
             type={image.type}
+            onTagClick={onTagClick}
+            onRegionClick={onRegionClick}
           />
         ))}
       </div>
