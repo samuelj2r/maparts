@@ -22,7 +22,7 @@ const alpsDesktop: ImageType[] = [
   },
   {
     id: '2',
-    src: image2,
+    src: image3,
     alt: "Fog-covered alpine mountains with reflections in the water.",
     region: "Alps",
     tags: ["fog", "mountains", "water reflections", "alps"],
@@ -30,7 +30,7 @@ const alpsDesktop: ImageType[] = [
   },
   {
     id: '3',
-    src: image3,
+    src: image9,
     alt: "Green hills with scattered houses in the Alps.",
     region: "Alps",
     tags: ["hills", "houses", "greenery", "landscape"],
@@ -46,7 +46,7 @@ const alpsDesktop: ImageType[] = [
   },
   {
     id: '5',
-    src: image5,
+    src: image8,
     alt: "Classic castle with alpine mountains in the background.",
     region: "Alps",
     tags: ["castle", "alpine mountains", "classic", "landmark"],
@@ -54,7 +54,7 @@ const alpsDesktop: ImageType[] = [
   },
   {
     id: '6',
-    src: image6,
+    src: image7,
     alt: "Alpine lake with boats and snowy mountains in the background.",
     region: "Alps",
     tags: ["lake", "boats", "snowy mountains", "alps"],
@@ -62,7 +62,7 @@ const alpsDesktop: ImageType[] = [
   },
   {
     id: '7',
-    src: image7,
+    src: image6,
     alt: "Green alpine valleys under a partly cloudy sky.",
     region: "Alps",
     tags: ["valleys", "alpine", "cloudy sky", "nature"],
@@ -70,7 +70,7 @@ const alpsDesktop: ImageType[] = [
   },
   {
     id: '8',
-    src: image8,
+    src: image5,
     alt: "Rock formation in the Alps shrouded in mist.",
     region: "Alps",
     tags: ["rock formation", "mist", "alps", "mystery"],
@@ -78,10 +78,10 @@ const alpsDesktop: ImageType[] = [
   },
   {
     id: '9',
-    src: image9,
-    alt: "Green meadow with scattered houses in the alpine region.",
+    src: image2,
+    alt: "Alpine lake and clear reflections.",
     region: "Alps",
-    tags: ["meadow", "houses", "green landscape", "alps"],
+    tags: ["lake", "reflections", "alpine", "nature"],
     type: "desktop"
   },
   {

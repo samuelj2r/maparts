@@ -15,7 +15,7 @@ export const alpsMobile: ImageType[] = [
     id: '21',
     src: dolomites1,
     alt: "Alpine village in the Dolomites",
-    region: "Dolomites",
+    region: "Alps",
     tags: ["dolomites", "mountains", "village", "alps", "landscape"],
     type: "mobile"
   },
@@ -23,7 +23,7 @@ export const alpsMobile: ImageType[] = [
     id: '22',
     src: dolomites2,
     alt: "Mountain lake reflection in the Dolomites",
-    region: "Dolomites",
+    region: "Alps",
     tags: ["dolomites", "mountains", "lake", "reflection", "forest"],
     type: "mobile"
   },
@@ -31,7 +31,7 @@ export const alpsMobile: ImageType[] = [
     id: '23',
     src: dolomites3,
     alt: "Wooden boats on Lago di Braies",
-    region: "Dolomites",
+    region: "Alps",
     tags: ["dolomites", "mountains", "lake", "boats", "reflection"],
     type: "mobile"
   },
@@ -39,7 +39,7 @@ export const alpsMobile: ImageType[] = [
     id: '24',
     src: forestImage,
     alt: "Green pine tree with blue flowers in a forest",
-    region: "Dolomites",
+    region: "Alps",
     tags: ["nature", "forest", "pine tree", "blue flowers", "greenery"],
     type: "mobile"
 },
@@ -47,7 +47,7 @@ export const alpsMobile: ImageType[] = [
   id: '25',
   src: mountainLakeImage,
   alt: "Mountain peak with turquoise lake at the base",
-  region: "Dolomites",
+  region: "Alps",
   tags: ["mountains", "lake", "nature", "turquoise water", "snow"],
   type: "mobile"
 },
@@ -55,7 +55,7 @@ export const alpsMobile: ImageType[] = [
   id: '26',
   src: churchTowerImage,
   alt: "Church tower with green spire against a clear blue sky",
-  region: "Tirol",
+  region: "Alps",
   tags: ["alps","church", "tower", "architecture", "spire", "blue sky"],
   type: "mobile"
 }
