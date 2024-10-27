@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import ImageGrid from './components/ImageGrid';
 import SearchBar from './components/SearchBar';
@@ -9,6 +9,12 @@ const App = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedregion, setSelectedregion] = useState<string | null>(null);
   const { images, loading } = useImages(deviceType);
+
+  // Detectar el tipo de dispositivo al cargar la aplicación
+  useEffect(() => {
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) || window.innerWidth <= 768;
+    setDeviceType(isMobile ? 'mobile' : 'desktop');
+  }, []);
 
   const handleTagClick = (tag: string) => {
     setSearchQuery(tag);
