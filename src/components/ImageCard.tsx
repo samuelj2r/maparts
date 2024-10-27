@@ -71,7 +71,10 @@ const ImageCard = ({ src, alt, region, tags, type, onTagClick, onRegionClick }: 
 
   return (
     <>
-      <div className="group relative overflow-hidden rounded-lg shadow-md transition-transform hover:scale-[1.03] bg-[#0a0b0d] border border-[#1f2128]">
+      <div 
+        className="group relative overflow-hidden rounded-lg shadow-md transition-transform hover:scale-[1.03] bg-[#0a0b0d] border border-[#1f2128] cursor-pointer" 
+        onClick={openModal}  // Mover el evento onClick aquí para asegurar que se registre
+      >
         {!imageError ? (
           <img
             src={src}
@@ -92,7 +95,7 @@ const ImageCard = ({ src, alt, region, tags, type, onTagClick, onRegionClick }: 
               {tags.map((tag, index) => (
                 <span
                   key={index}
-                  onClick={() => onTagClick(tag)}
+                  onClick={(e) => { e.stopPropagation(); onTagClick(tag); }} // Evitar abrir el modal al hacer clic en tags
                   className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 cursor-pointer hover:bg-blue-200"
                 >
                   <TagIcon className="w-3 h-3 mr-1" />
@@ -101,19 +104,12 @@ const ImageCard = ({ src, alt, region, tags, type, onTagClick, onRegionClick }: 
               ))}
             </div>
             <div 
-              onClick={() => onRegionClick(region)} 
+              onClick={(e) => { e.stopPropagation(); onRegionClick(region); }} // Evitar abrir el modal al hacer clic en la región
               className="flex items-center text-sm font-semibold text-white cursor-pointer hover:text-blue-400 mb-2"
             >
               <MapPin className="h-4 w-4 mr-1 text-blue-500" />
               <span>{region}</span>
             </div>
-            <button
-              onClick={openModal}
-              className="flex items-center space-x-2 bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-full text-sm transition-colors shadow-md"
-            >
-              <Download className="h-4 w-4" />
-              <span>View & Download</span>
-            </button>
           </div>
         </div>
       </div>
